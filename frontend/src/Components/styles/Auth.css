@@ -1,0 +1,224 @@
+/* =========================
+   Auth Layout
+========================= */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================
+   Auth Card
+========================= */
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #1f2937;
+}
+
+/* =========================
+   Messages
+========================= */
+
+.success-message {
+  background: #dcfce7;
+  color: #166534;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* =========================
+   Form
+========================= */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* =========================
+   Errors
+========================= */
+
+.input-error {
+  border-color: #ef4444;
+}
+
+.field-error {
+  font-size: 12px;
+  color: #dc2626;
+  margin-top: 4px;
+}
+
+/* =========================
+   Password Strength
+========================= */
+
+.password-strength {
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.strength-weak {
+  color: #dc2626;
+}
+
+.strength-medium {
+  color: #d97706;
+}
+
+.strength-strong {
+  color: #16a34a;
+}
+
+.password-hint {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* =========================
+   Button
+========================= */
+
+.submit-button,
+.auth-form button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-button:hover,
+.auth-form button:hover {
+  background: #4338ca;
+}
+
+.submit-button:active,
+.auth-form button:active {
+  transform: scale(0.98);
+}
+
+.submit-button:disabled,
+.auth-form button:disabled {
+  background: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Footer Links
+========================= */
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #374151;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #4f46e5;
+  font-weight: 600;
+  margin-left: 4px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 24px;
+  }
+
+  .auth-title {
+    font-size: 22px;
+  }
+}
